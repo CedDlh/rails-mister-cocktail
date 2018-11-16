@@ -1,8 +1,27 @@
-<h1>Welcome to Mr Cocktail</h1>
-<h2>Here are all the cocktails you need to get drunk and have fun</h2>
 
-<ul>
-  <%= link_to "Add a new beverage", cocktail_path(:new) %>
-<% @cocktails.each do |cocktail| %>
+<%= render "components/banner"  %>
+
+<h3>Our favorites </h3>
+  <div class="container">
+    <div class: "card-container">
+      <ul style="list-style-type:none">
+  <div class="row">
+     <% @cocktails.each do |cocktail| %>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://www.cakesandpumps.com/wp-content/uploads/2016/12/Hendricks-gin-tonice-with-fentimans.jpg');">
+  <ul><div class="card-category">Great for blackout </div>
+  <div class="card-description">
+
   <li><%= link_to "#{cocktail.name}", cocktail_path(cocktail)  %></li>
-<% end %> </ul>
+</div>
+</div>
+</div>
+<% end %>
+
+</div>
+ </ul>
+
+
+
+
+
